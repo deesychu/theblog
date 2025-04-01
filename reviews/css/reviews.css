@@ -1,0 +1,246 @@
+@font-face {
+    font-family: PinyonScript;
+    src: url(/fonts/PinyonScript-Regular.ttf);
+}
+
+@font-face {
+    font-family: Bodoni;
+    src: url(/fonts/bodoni_[allfont.net].ttf);
+}
+
+@font-face {
+    font-family: CaniculeDisplay-Regular;
+    src: url(/fonts/CaniculeDisplayv0.3-Regular.Trial.ttf);
+}
+
+@font-face {
+    font-family: BurguesScript;
+    src: url(/fonts/Burgues\ Script\ Regular.otf);
+}
+
+@font-face {
+    font-family: CaniculeDisplay-SemiBold;
+    src: url(/fonts/CaniculeDisplayv0.3-SemiBold.Trial.ttf);
+}
+
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #F7DDE8;
+    color: #333;
+}
+
+/* Top Navigation */
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    border: 1px solid #E64D7C;
+    border-radius: 45px;
+    width: 95%;
+    margin: 15px auto;
+    position: sticky;
+    top: 5px;
+    z-index: 1000;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.top-nav a {
+    font-family: CaniculeDisplay-SemiBold;
+    text-decoration: none;
+    color: #E64D7C;
+    font-weight: bold;
+    padding: 5px 8px;
+    font-size: 18px;
+}
+
+.top-nav img {
+    height: 35px;
+}
+
+/* Title Card */
+.title-card {
+    background-color: #F7DDE8;
+    text-align: center;
+    padding: 50px;
+    color: #E64D7C;
+    margin-top: -15%;
+}
+
+.title-card img {
+    width: 15%;
+    height: 15%;
+    position: relative;
+}
+
+.burgues {
+    color: #E64D7C;
+    font-family: BurguesScript;
+    font-size: 180px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    position: relative;
+}
+
+.title-card h1 {
+    color: #E64D7C;
+    font-family: PinyonScript;
+    font-size: 100px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    position: relative;
+}
+
+.title-card h3 {
+    color: #FFF;
+    font-family: CaniculeDisplay-SemiBold;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 1.29px;
+    border-radius: 45px;
+    border: 3px solid #FFF;
+    background: #E64D7C;
+    margin-top: -15%;
+    position: relative;
+    margin-bottom: 10%;
+}
+
+/* Intro Section */
+.intro {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.intro-box {
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 45px;
+    border: 4px solid #FFF;
+    background: #F7DDE8;
+    padding: 40px;
+    margin: 15px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+}
+
+.intro p {
+    color:#E64D7C;
+}
+
+.intro ol {
+    padding-left: 20px;
+    color:#E64D7C;
+}
+
+/* Review Sections */
+.review {
+    background-color: white;
+    padding: 25px;
+    margin: 40px auto;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 75%;
+    text-align: left;
+}
+
+.review:nth-child(even) {
+    background-color: white;
+}
+
+.review h2 {
+    font-family: 'YourIndexFont', sans-serif;
+    font-size: 28px;
+    color: #d62e75;
+    border-bottom: 2px solid #ff9eb5;
+    padding-bottom: 10px;
+}
+
+.review p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #4d4d4d;
+}
+
+.review img {
+    width: 100%;
+    max-width: 400px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 8px;
+}
+
+.review p strong {
+    color: #d62e75;
+}
+
+.review h2 {
+    font-family: PinyonScript;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #F7DDE8;
+    color: #E64D7C;
+}
+
+footer img {
+    position: relative;
+    display: inline-block;
+}
+
+footer p {
+    color: #FFF;
+    font-family: CaniculeDisplay-Regular;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 200;
+    line-height: normal;
+    border-radius: 45px;
+    border: 1px solid #FFF;
+    background: #E64D7C;
+}
+
+footer h4 {
+    font-family: PinyonScript;
+    font-size: 20px;
+    margin: 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+footer hr {
+    width: 296px;
+    height: 2px;
+    flex-shrink: 0;
+    border: 0.5px solid #E64D7C;
+    background: #FFF;
+}
+
+.symbols {
+    font-family: Bodoni;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+p, ol {
+    font-family: CaniculeDisplay-Regular;
+}
