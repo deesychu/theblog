@@ -1,26 +1,26 @@
 @font-face {
     font-family: PinyonScript;
-    src: url(fonts/PinyonScript-Regular.ttf);
+    src: url(/fonts/PinyonScript-Regular.ttf);
 }
 
 @font-face {
     font-family: Bodoni;
-    src: url(fonts/bodoni_[allfont.net].ttf);
+    src: url(/fonts/bodoni_[allfont.net].ttf);
 }
 
 @font-face {
     font-family: CaniculeDisplay-Regular;
-    src: url(fonts/CaniculeDisplayv0.3-Regular.Trial.ttf);
+    src: url(/fonts/CaniculeDisplayv0.3-Regular.Trial.ttf);
 }
 
 @font-face {
     font-family: BurguesScript;
-    src: url(fonts/Burgues\ Script\ Regular.otf);
+    src: url(/fonts/Burgues\ Script\ Regular.otf);
 }
 
 @font-face {
     font-family: CaniculeDisplay-SemiBold;
-    src: url(fonts/CaniculeDisplayv0.3-SemiBold.Trial.ttf);
+    src: url(/fonts/CaniculeDisplayv0.3-SemiBold.Trial.ttf);
 }
 
 /* General Styles */
