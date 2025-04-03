@@ -176,7 +176,7 @@ html {
 }
 /* Laneige */
 #laneige {
-    background: url('/reviews/img/ribbonbg.png') repeat center center;
+    background: url('/img/ribbonbg.png') repeat center center;
     background-size: fill;
     background-color: white;
     padding: 40px 0;
@@ -291,6 +291,14 @@ html {
     font-weight: 400;
     font-style: italic;
     font-size: 20px;
+    transition: transform 0.2s ease-in-out, background 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+h5:hover {
+    transform: scale(1.1); 
+    background-color: white;
+    color: #E64D7C;
+    border: 2px solid #E64D7C;
 }
 
 .review1-right {
