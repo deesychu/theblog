@@ -197,7 +197,7 @@ html {
 
 /* Reviews */
 #reviews {
-    background: url('/img/ribbonbg.png') no-repeat center center;
+    background: url('../img/ribbonbg.png') no-repeat center center;
     background-size: cover;
     background-color: white;
     padding: 50px 10%;

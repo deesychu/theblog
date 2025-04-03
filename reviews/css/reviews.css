@@ -174,9 +174,9 @@ html {
     font-weight: 500;
     font-size: 18px;
 }
-/* Laneige */
-#laneige {
-    background: url('/img/ribbonbg.png') repeat center center;
+/* Laneige & Summer Fridays */
+#laneige, #summer-fridays {
+    background: url('../img/ribbonbg.png') repeat center center;
     background-size: fill;
     background-color: white;
     padding: 40px 0;
@@ -381,4 +381,185 @@ details p {
     border: 1px solid #E64D7C;
     margin-top: 5px;
     transition: all 0.3s ease-in-out;
+}
+
+/* OleHenriksen & Tower28 */
+#olehenriksen, #tower28 {
+    background-color: #E64D7C;
+    padding: 40px 0;
+    display: block;
+    text-align: center;
+}
+.review4 {
+    display: flex;
+    align-items: center;
+    background-color: #E64D7C;
+    border: 4px solid white;
+    border-radius: 45px;
+    padding: 20px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    max-width: 85%;
+    margin: 20px auto; 
+    position: relative;
+}
+
+.review4, .review5, .review6 {
+    width: 85%;
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.review4 {
+    background-color: #F7DDE8;
+    border: 4px solid white;
+    flex-direction: row-reverse;
+}
+
+.review4-left {
+    width: 55%;
+    color: #E64D7C;
+    font-family: "ivyora-display", serif;
+    font-weight: 500;
+    font-size: 16px;
+    margin-left: 50px;
+}
+
+.review4-left h2 {
+    display: inline-block;
+    border: 2px solid #E64D7C;
+    border-radius: 15px;
+    padding: 8px 15px;
+    background-color: white;
+    text-align: center;
+    font-family: "ivyora-display", serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.review4-left h5 {
+    display: inline-block;
+    border: 2px solid white;
+    border-radius: 15px;
+    padding: 8px 15px;
+    color: white;
+    background-color: #E64D7C;
+    text-align: center;
+    font-family: "ivyora-display", serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 20px;
+    transition: transform 0.2s ease-in-out, background 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.review4-left h5:hover {
+    transform: scale(1.1); 
+    background-color: white;
+    color: #E64D7C;
+    border: 2px solid #E64D7C;
+}
+
+.review5 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.review5-left {
+    width: 50%;
+    display: flex;
+    flex-direction: column 2fr;
+    margin-left: 7.8%;
+    gap: 100px;
+    align-items: center;
+}
+
+.review5-right {
+    width: 100%;
+    text-align: left;
+    border-radius: 45px;
+    color: #E64D7C;
+    background-color: #F7DDE8;
+    border: 4px solid white;
+}
+
+.review5 h3 {
+    font-family: "parfumerie-script", sans-serif;
+    font-weight: 400;
+    font-size: 60px;
+    margin-top: -40px;
+    margin-bottom: 15px;
+}
+
+.review5-left img {
+    max-width: 80%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 45px;
+    border: 4px solid white;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #F7DDE8;
+    color: #E64D7C;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+footer h4 {
+    font-size: 20px;
+    font-style: italic;
+    margin: 0;
+}
+
+footer p {
+    color: #FFF;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 200;
+    line-height: normal;
+    border-radius: 45px;
+    border: 1px solid #FFF;
+    background: #E64D7C;
+    width: 25%;
+    margin-left: 37.5%;
+    padding: 5px 0;
+}
+
+footer hr {
+    width: 296px;
+    height: 2px;
+    flex-shrink: 0;
+    border: 0.5px solid #E64D7C;
+    background: #FFF;
+}
+
+footer img {
+    position: relative;
+    display: inline-block;
+}
+
+footer a img {
+    width: 6%;
+    height: auto;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    margin: -8px 5px;
+}
+
+footer a img:hover {
+    transform: scale(1.2); 
+    filter: drop-shadow(0px 0px 6px #E64D7C);
 }
