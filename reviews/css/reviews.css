@@ -4,6 +4,10 @@ body {
     padding: 0;
 }
 
+a {
+    text-decoration: none;
+}
+
 /* Hover, Scroll, etc. */
 html {
     scroll-behavior: smooth;
@@ -121,51 +125,133 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 40px 5%;
-    gap: 20px;
+    padding: 0;
+    gap: 0;
+    margin-bottom: -45px;
+}
+
+.intro img, .intro2 img {
+    width: 50%;
+    height: 100%;
+    object-fit: fill;
+    border-radius: 0;
 }
 
 .intro-box {
     font-family: "ivyora-display", serif;
     font-weight: 500;
     font-size: 18px;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 45px;
-    border: 4px solid #FFF;
-    background: #F7DDE8;
-    color: #E64D7C;
+    border-radius: 0;
+    border: none; 
+    color: white;
     padding: 40px;
-    margin: 15px;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
-    max-width: 500px;
+    max-width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    text-align: left;
 }
 
-.intro p {
-    color:#E64D7C;
-}
-
-.intro ol {
-    padding-left: 20px;
-    color:#E64D7C;
-}
-
-.intro img, .intro2 img {
-    width: 600px;
-    height: auto;
-    border-radius: 10px;
-}
-
-.intro-box {
-    max-width: 600px;
+.intro p, .intro ol {
+    color: white;
+    font-family: "ivyora-display", serif;
+    font-weight: 500;
+    font-size: 18px;
 }
 
 .intro {
     flex-direction: row-reverse;
-    text-align: left;
 }
 
 .intro2 {
     flex-direction: row;
-    text-align: left;
+}
+
+/* Reviews */
+.review p {
+    font-family: "ivyora-display", serif;
+    font-weight: 500;
+    font-size: 18px;
+}
+/* Laneige */
+#laneige {
+    background: url('/img/ribbonbg.png') no-repeat center center;
+    background-size: cover;
+    background-color: white;
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.review1 {
+    display: flex;
+    align-items: center;
+    background-color: #F7DDE8;
+    border: 4px solid #E64D7C;
+    border-radius: 45px;
+    padding: 20px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    max-width: 85%;
+    margin: 20px auto; 
+    position: relative;
+}
+
+.review1-left {
+    width: 55%;
+    color: #E64D7C;
+    font-family: "ivyora-display", serif;
+    font-weight: 500;
+    font-size: 16px;
+    margin-left: 50px;
+}
+
+.review1-left h2 {
+    display: inline-block;
+    border: 2px solid #E64D7C;
+    border-radius: 15px;
+    padding: 8px 15px;
+    background-color: white;
+    text-align: center;
+    font-family: "ivyora-display", serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 27px;
+    margin-bottom: 10px;
+}
+
+.review1-left h5 {
+    display: inline-block;
+    border: 2px solid white;
+    border-radius: 15px;
+    padding: 8px 15px;
+    color: white;
+    background-color: #E64D7C;
+    text-align: center;
+    font-family: "ivyora-display", serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 20px;
+}
+
+.review1-right {
+    width: 45%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.review1-right img:first-child {
+    position: absolute;
+    width: 110%;
+    z-index: 1;
+}
+
+.review1-right img:last-child {
+    position: relative;
+    z-index: 2;
+    max-width: 70%;
+    height: auto;
 }
