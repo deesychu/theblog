@@ -218,6 +218,12 @@ html {
     margin-top: 2%;
 }
 
+#reviews h2:hover {
+    transform: scale(1.1); 
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: drop-shadow(0px 0px 6px #E64D7C);
+}
+
 #review-box {
     display: flex;
     flex-wrap: nowrap; 
@@ -409,5 +415,5 @@ footer a img {
 
 footer a img:hover {
     transform: scale(1.2); 
-    filter: drop-shadow(0px 0px 6px rgba(230, 77, 124, 0.5));
+    filter: drop-shadow(0px 0px 6px #E64D7C);
 }
