@@ -176,12 +176,12 @@ html {
 }
 /* Laneige */
 #laneige {
-    background: url('/reviews/img/ribbonbg.png') no-repeat center center;
-    background-size: cover;
+    background: url('/reviews/img/ribbonbg.png') repeat center center;
+    background-size: fill;
     background-color: white;
     padding: 40px 0;
-    display: flex;
-    justify-content: center;
+    display: block;
+    text-align: center;
 }
 
 .review1 {
@@ -196,6 +196,64 @@ html {
     max-width: 85%;
     margin: 20px auto; 
     position: relative;
+}
+
+.review1, .review2, .review3 {
+    width: 85%;
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.review1 {
+    background-color: #F7DDE8;
+    border: 4px solid #E64D7C;
+}
+
+.review2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.review2-left {
+    width: 50%;
+    display: flex;
+    flex-direction: column 2fr;
+    margin-left: 7.8%;
+    gap: 100px;
+    align-items: center;
+}
+
+.review2-right {
+    width: 100%;
+    text-align: left;
+    border-radius: 45px;
+    color: #E64D7C;
+    background-color: #F7DDE8;
+    border: 4px solid #E64D7C;
+}
+
+.review2 h3 {
+    font-family: "parfumerie-script", sans-serif;
+    font-weight: 400;
+    font-size: 60px;
+    margin-top: -40px;
+    margin-bottom: 15px;
+}
+
+.review3 {
+    background-color: #F7DDE8;
+    border: 4px solid #E64D7C;
+    color: #E64D7C;
+}
+
+.review2-left img {
+    max-width: 80%;
+    height: auto;
+    margin-bottom: 10px;
 }
 
 .review1-left {
@@ -254,4 +312,65 @@ html {
     z-index: 2;
     max-width: 70%;
     height: auto;
+}
+
+.pros-cons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+.pros, .cons {
+    width: 48%;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: left;
+    font-size: 18px;
+}
+
+h3 {
+    text-align: center;
+    font-family: "ivyora-display", serif;
+    color: #E64D7C;
+    font-size: 28px
+}
+
+details {
+    margin-bottom: 15px;
+    font-size: 18px; 
+}
+
+summary {
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: white;
+    border: 2px solid #E64D7C;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+summary::after {
+    content: "▼";
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+details[open] summary::after {
+    content: "▲";
+}
+
+details p {
+    padding: 12px;
+    font-size: 16px;
+    background-color: #FFF5F8;
+    border-radius: 10px;
+    border: 1px solid #E64D7C;
+    margin-top: 5px;
+    transition: all 0.3s ease-in-out;
 }
