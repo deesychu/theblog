@@ -1,34 +1,12 @@
-@font-face {
-    font-family: PinyonScript;
-    src: url(/fonts/PinyonScript-Regular.ttf);
-}
-
-@font-face {
-    font-family: Bodoni;
-    src: url(/fonts/bodoni_[allfont.net].ttf);
-}
-
-@font-face {
-    font-family: CaniculeDisplay-Regular;
-    src: url(/fonts/CaniculeDisplayv0.3-Regular.Trial.ttf);
-}
-
-@font-face {
-    font-family: BurguesScript;
-    src: url(/fonts/Burgues\ Script\ Regular.otf);
-}
-
-@font-face {
-    font-family: CaniculeDisplay-SemiBold;
-    src: url(/fonts/CaniculeDisplayv0.3-SemiBold.Trial.ttf);
-}
-
 /* General Styles */
 body {
     margin: 0;
     padding: 0;
-    background-color: #F7DDE8;
-    color: #333;
+}
+
+/* Hover, Scroll, etc. */
+html {
+    scroll-behavior: smooth;
 }
 
 /* Top Navigation */
@@ -40,7 +18,7 @@ body {
     border: 1px solid #E64D7C;
     border-radius: 45px;
     width: 95%;
-    margin: 15px auto;
+    margin: 10px auto;
     position: sticky;
     top: 5px;
     z-index: 1000;
@@ -49,18 +27,47 @@ body {
 }
 
 .top-nav a {
+    font-family:"ivyora-display", serif;
+    font-weight: 700;
     text-decoration: none;
     color: #E64D7C;
-    font-weight: bold;
-    padding: 5px 8px;
-    font-size: 18px;
+    padding: 5px 10px;
+    font-size: 20px;
+    display: inline-block;
+    margin: -10px 5px;
+}
+
+.top-nav p {
+    color: #E64D7C;
 }
 
 .top-nav img {
     height: 35px;
 }
 
+/* Border */
+#border {
+    margin-top: -3%;
+    margin-bottom: -2.5%;
+}
+
 /* Title Card */
+#aura-bg {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    z-index: .5;
+}
+
+#aura-bg img {
+    width: 50%;
+    display: block;
+    margin: auto;
+    opacity: 0.6;
+}
+
 .title-card {
     background-color: #F7DDE8;
     text-align: center;
@@ -73,45 +80,50 @@ body {
     width: 15%;
     height: 15%;
     position: relative;
-}
-
-.burgues {
-    color: #E64D7C;
-    font-family: BurguesScript;
-    font-size: 180px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    position: relative;
+    padding-left: 15px;
+    z-index: 1;
 }
 
 .title-card h1 {
+    font-family: "parfumerie-script", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     color: #E64D7C;
-    font-family: PinyonScript;
-    font-size: 100px;
+    font-size: 250px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    position: relative;
+    z-index: 1;
+    margin-top: 7%;
 }
 
 .title-card h3 {
     color: #FFF;
-    font-family: CaniculeDisplay-SemiBold;
-    font-size: 35px;
+    font-family: "ivyora-display", serif;
+    font-weight: 700;
     font-style: normal;
-    font-weight: 600;
+    font-size: 28px;
     line-height: normal;
     letter-spacing: 1.29px;
     border-radius: 45px;
     border: 3px solid #FFF;
     background: #E64D7C;
-    margin-top: -15%;
+    margin-top: -23%;
     position: relative;
     margin-bottom: 10%;
+    margin-left: 22%;
+    width: 55%;
 }
 
 /* Intro */
+#intro {
+    background-color: #E64D7C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 5%;
+}
+
 .intro-box, .about-box {
     display: flex;
     justify-content: space-between;
@@ -120,63 +132,100 @@ body {
     border: 4px solid #FFF;
     background: #F7DDE8;
     padding: 40px;
-}
-#intro {
-    background-color: #E64D7C;
-    color: #E64D7C;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 40px 5%;
+    gap: 5%;
+    max-width: 1200px;
+    width: 100%;
 }
 
-#intro h2 {
-    font-family: PinyonScript;
-    font-size: 30px;
-    color: #E64D7C;
+#left-intro {
+    position: relative;
+    flex: 1;
+    max-width: 50%;
 }
 
-#intro p {
-    color: #E64D7C;
-    font-family: CaniculeDisplay-Regular;
-    font-size: 16px;
-    font-style: normal;
+#intro-photo img {
+    width: 100%;
+    height: auto;
+    max-width: 450px;
+    display: block;
+    border-radius: 45px;
+    border: 4px solid #FFF;
+}
+
+#intro-photo::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 15%;
+    background: #F7DDE8;
+    border-radius: 20px;
+}
+
+#right-intro {
+    flex: 1;
+    text-align: right;
+    max-width: 50%;
+}
+
+#right-intro h2 {
+    font-family: "parfumerie-script", sans-serif;
     font-weight: 400;
-    line-height: normal;
-    letter-spacing: 0.84px;
+    font-size: 60px;
+    color: #E64D7C;
+    background: white;
+    border: 1px solid #E64D7C;
+    border-radius: 20px;
+    display: inline-block;
+    padding: 5px 15px;
+    width: auto; 
+    margin-bottom: 10px;
+    margin-top: 2%;
+}
+
+#right-intro p {
+    color: #E64D7C;
+    font-family: "ivyora-display", serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.3; 
+    letter-spacing: 0.5px;
+    margin-top: 20px;
 }
 
 /* Reviews */
 #reviews {
-    background: url('img/ribbonbg.png') no-repeat center center;
+    background: url('/img/ribbonbg.png') no-repeat center center;
     background-size: cover;
     background-color: white;
-    color: black;
     padding: 50px 10%;
+    text-align: center;
+}
+
+#reviews h2 {
+    font-family: "parfumerie-script", sans-serif;
+    font-weight: 400;
+    font-size: 80px;
+    color: #E64D7C;
+    border-radius: 20px;
+    border: 2px solid #E64D7C;
+    background: #F7DDE8;
+    padding: 5px 20px;
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-top: 2%;
 }
 
 #review-box {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: nowrap; 
     justify-content: center;
-    gap: 20px;
-    padding: 20px;
-}
-
-#reviews h2 {
-    font-family: PinyonScript;
-    font-size: 30px;
-    color:#E64D7C;
-    border-radius: 45px;
-    border: 2px solid #E64D7C;
-    background: #F7DDE8;
-    align-items: center;
-}
-
-#reviews h4 {
-    color: #E64D7C;
-    font-family: CaniculeDisplay-SemiBold;
-    font-size: 20px;
+    padding: 15px;
+    gap: 15px;
+    overflow-x: auto;
+    margin-bottom: 30px;
 }
 
 .lip-review {
@@ -185,13 +234,28 @@ body {
     align-items: center;
     text-align: center;
     background: #FFF;
+    color: #E64D7C;
     border: 2px solid #E64D7C;
     border-radius: 15px;
-    padding: 15px;
-    width: 100%;
-    min-width: 220px; 
+    padding: 10px; 
+    width: 80%;
+    min-width: 20%;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out, background 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.lip-review:hover {
+    transform: translateY(-5px);
+    background: #E64D7C; 
+    color: white;
+}
+
+.lip-review:hover h4 {
+    color: white;
+}
+
+.lip-review:hover a {
+    color: white;
 }
 
 .lip-review img {
@@ -200,48 +264,92 @@ body {
     border-radius: 10px;
 }
 
-.lip-review h4 {
-    color: #E64D7C;
-    font-family: CaniculeDisplay-Regular;
-    font-size: 16px;
-    margin-top: 10px;
-    padding: 5px;
+#reviews a {
+    text-decoration: none;
+    color: inherit;
 }
 
 /* About */
 #about {
     background-color: #E64D7C;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 40px 5%;
 }
 
-#about h2 {
-    font-family: PinyonScript;
-    font-size: 30px;
-    color: #E64D7C;
+/* Main Content Box */
+.about-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 45px;
+    border: 4px solid #FFF;
+    background: #F7DDE8;
+    padding: 40px;
+    gap: 5%;
+    max-width: 1200px;
+    width: 100%;
 }
 
-#about p {
-    color: #E64D7C;
-    font-family: CaniculeDisplay-Regular;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: 0.84px;
-}
-
-/* Left and Right Sections */
-#left-intro, .about-left {
+.about-left {
     flex: 1;
     text-align: left;
+    max-width: 50%;
 }
 
-#right-intro, .about-right {
+.about-left h2 {
+    font-family: "parfumerie-script", sans-serif;
+    font-weight: 400;
+    font-size: 60px;
+    color: #E64D7C;
+    background: white;
+    border: 1px solid #E64D7C;
+    border-radius: 20px;
+    display: inline-block;
+    padding: 5px 15px;
+    width: auto;
+    margin-bottom: 10px;
+    margin-top: 2%;
+}
+
+.about-left p {
+    color: #E64D7C;
+    font-family: "ivyora-display", serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.3;
+    letter-spacing: 0.84px;
+    margin-top: 20px;
+}
+
+.about-right {
+    position: relative;
     flex: 1;
+    max-width: 50%;
     text-align: right;
+}
+
+.about-right img {
+    width: 100%;
+    height: auto;
+    max-width: 450px;
+    display: block;
+    border-radius: 45px;
+    border: 4px solid #FFF;
+    margin-left: 10%;
+}
+
+.about-right::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #F7DDE8;
+    opacity: 15%;
+    border-radius: 20px;
 }
 
 /* Footer */
@@ -252,14 +360,21 @@ footer {
     color: #E64D7C;
 }
 
-footer img {
-    position: relative;
-    display: inline-block;
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+footer h4 {
+    font-size: 20px;
+    font-style: italic;
+    margin: 0;
 }
 
 footer p {
     color: #FFF;
-    font-family: CaniculeDisplay-Regular;
     font-size: 16px;
     font-style: italic;
     font-weight: 200;
@@ -267,19 +382,9 @@ footer p {
     border-radius: 45px;
     border: 1px solid #FFF;
     background: #E64D7C;
-}
-
-footer h4 {
-    font-family: PinyonScript;
-    font-size: 20px;
-    margin: 0;
-}
-
-.footer-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+    width: 25%;
+    margin-left: 37.5%;
+    padding: 5px 0;
 }
 
 footer hr {
@@ -290,10 +395,19 @@ footer hr {
     background: #FFF;
 }
 
-.symbols {
-    font-family: Bodoni;
+footer img {
+    position: relative;
+    display: inline-block;
 }
 
-html {
-    scroll-behavior: smooth;
+footer a img {
+    width: 6%;
+    height: auto;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    margin: -8px 5px;
+}
+
+footer a img:hover {
+    transform: scale(1.2); 
+    filter: drop-shadow(0px 0px 6px rgba(230, 77, 124, 0.5));
 }
