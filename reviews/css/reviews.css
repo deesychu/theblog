@@ -8,45 +8,101 @@ a {
     text-decoration: none;
 }
 
-/* Hover, Scroll, etc. */
 html {
     scroll-behavior: smooth;
 }
 
+/* Buttons */
+.icon-button {
+    position: fixed;
+    z-index: 9999;
+    text-align: center;
+}
+
+#homeBtn {
+    left: 20px;
+    bottom: 20px;
+}
+
+#scrollTopBtn {
+    right: 20px;
+    bottom: 20px;
+}
+
+.icon-button img {
+    width: 80px;
+    height: auto;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    display: block;
+    margin: 0 auto;
+}
+
+.icon-button:hover img {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 10px white);
+}
+
+.button-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "ivyora-display", serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #E64D7C;
+    background-color: #F7DDE8;
+    border: 1px solid white;
+    padding: 5px 10px;
+    border-radius: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    white-space: nowrap;
+}
+
+.icon-button:hover .button-label {
+    opacity: 1;
+}
+
+
 /* Top Navigation */
 .top-nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     background: white;
     border: 1px solid #E64D7C;
     border-radius: 45px;
     width: 95%;
     margin: 10px auto;
+    padding: 10px 30px;
     position: sticky;
     top: 5px;
     z-index: 1000;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease-in-out;
+    gap: 5%; 
 }
 
 .top-nav a {
-    font-family:"ivyora-display", serif;
+    font-family: "ivyora-display", sans-serif;
     font-weight: 700;
     text-decoration: none;
     color: #E64D7C;
+    font-size: 18px;
     padding: 5px 10px;
-    font-size: 20px;
     display: inline-block;
-    margin: -10px 5px;
+}
+
+.top-nav a:hover {
+    font-style: italic;
 }
 
 .top-nav p {
+    margin: 0;
+    font-size: 20px;
     color: #E64D7C;
-}
-
-.top-nav img {
-    height: 35px;
 }
 
 /* Border */
@@ -103,7 +159,7 @@ html {
 
 .title-card h3 {
     color: #FFF;
-    font-family: "ivyora-display", serif;
+    font-family: "ivyora-display", sans-serif;
     font-weight: 700;
     font-style: normal;
     font-size: 28px;
@@ -127,7 +183,6 @@ html {
     align-items: center;
     padding: 0;
     gap: 0;
-    margin-bottom: -45px;
 }
 
 .intro img, .intro2 img {
@@ -138,12 +193,10 @@ html {
 }
 
 .intro-box {
-    font-family: "ivyora-display", serif;
+    font-family: "ivyora-display", sans-serif;
     font-weight: 500;
     font-size: 18px;
     border-radius: 0;
-    border: none; 
-    color: white;
     padding: 40px;
     max-width: 50%;
     height: 100%;
@@ -153,27 +206,44 @@ html {
     text-align: left;
 }
 
-.intro p, .intro ol {
-    color: white;
-    font-family: "ivyora-display", serif;
+.intro-right, .intro-left {
+    border: 3px solid white;
+    border-radius: 15px;
+    padding: 8px 15px;
+    background-color: #F7DDE8;
+}
+
+.intro2 p, .intro2 ol {
+    color: #E64D7C;
+    font-family: "ivyora-display", sans-serif;
+    font-weight: 500;
+    font-size: 15.5px;
+}
+
+.intro p {
+    color: #E64D7C;
+    font-family: "ivyora-display", sans-serif;
     font-weight: 500;
     font-size: 18px;
 }
 
 .intro {
     flex-direction: row-reverse;
+    margin-bottom: -20px;
 }
 
 .intro2 {
     flex-direction: row;
+    margin-bottom: -45px;
 }
 
 /* Reviews */
 .review p {
-    font-family: "ivyora-display", serif;
+    font-family: "ivyora-display", sans-serif;
     font-weight: 500;
     font-size: 18px;
 }
+
 /* Laneige & Summer Fridays */
 #laneige, #summer-fridays {
     background: url('../img/ribbonbg.png') repeat center center;
@@ -187,9 +257,6 @@ html {
 .review1 {
     display: flex;
     align-items: center;
-    background-color: #F7DDE8;
-    border: 4px solid #E64D7C;
-    border-radius: 45px;
     padding: 20px;
     padding-top: 50px;
     padding-bottom: 50px;
@@ -204,11 +271,6 @@ html {
     margin: 20px auto;
     padding: 20px;
     border-radius: 20px;
-}
-
-.review1 {
-    background-color: #F7DDE8;
-    border: 4px solid #E64D7C;
 }
 
 .review2 {
@@ -250,6 +312,12 @@ html {
     color: #E64D7C;
 }
 
+.review6 p, .review3 p {
+    font-family: "ivyora-display", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+}
+
 .review2-left img {
     max-width: 80%;
     height: auto;
@@ -257,11 +325,17 @@ html {
 }
 
 .review1-left {
+    background-color: #F7DDE8;
+    border: 4px solid #E64D7C;
+    border-radius: 45px;
+    padding-left: 3%;
+    padding-right: 3%;
     width: 55%;
     color: #E64D7C;
-    font-family: "ivyora-display", serif;
+    font-family: "ivyora-display", sans-serif;
     font-weight: 500;
-    font-size: 16px;
+    align-items: center;
+    font-size: 18px;
     margin-left: 50px;
 }
 
@@ -272,10 +346,10 @@ html {
     padding: 8px 15px;
     background-color: white;
     text-align: center;
-    font-family: "ivyora-display", serif;
+    font-family: "ivyora-display", sans-serif;
     font-weight: 400;
     font-style: italic;
-    font-size: 27px;
+    font-size: 28px;
     margin-bottom: 10px;
 }
 
@@ -287,7 +361,7 @@ html {
     color: white;
     background-color: #E64D7C;
     text-align: center;
-    font-family: "ivyora-display", serif;
+    font-family: "ivyora-display", sans-serif;
     font-weight: 400;
     font-style: italic;
     font-size: 20px;
@@ -340,7 +414,7 @@ h5:hover {
 
 h3 {
     text-align: center;
-    font-family: "ivyora-display", serif;
+    font-family: "ivyora-display", sans-serif;
     color: #E64D7C;
     font-size: 28px
 }
@@ -373,9 +447,13 @@ details[open] summary::after {
     content: "▲";
 }
 
+summary:hover {
+    font-style: italic;
+}
+
 details p {
     padding: 12px;
-    font-size: 16px;
+    font-size: 18px;
     background-color: #FFF5F8;
     border-radius: 10px;
     border: 1px solid #E64D7C;
@@ -393,8 +471,6 @@ details p {
 .review4 {
     display: flex;
     align-items: center;
-    background-color: #E64D7C;
-    border: 4px solid white;
     border-radius: 45px;
     padding: 20px;
     padding-top: 50px;
@@ -412,18 +488,17 @@ details p {
     border-radius: 20px;
 }
 
-.review4 {
+.review4-left {
     background-color: #F7DDE8;
     border: 4px solid white;
-    flex-direction: row-reverse;
-}
-
-.review4-left {
+    border-radius: 45px;
+    padding-left: 3%;
+    padding-right: 3%;
     width: 55%;
     color: #E64D7C;
-    font-family: "ivyora-display", serif;
+    font-family: "ivyora-display", sans-serif;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 18px;
     margin-left: 50px;
 }
 
@@ -434,10 +509,10 @@ details p {
     padding: 8px 15px;
     background-color: white;
     text-align: center;
-    font-family: "ivyora-display", serif;
+    font-family: "ivyora-display", sans-serif;
     font-weight: 400;
     font-style: italic;
-    font-size: 24px;
+    font-size: 25px;
     margin-bottom: 10px;
 }
 
@@ -449,7 +524,7 @@ details p {
     color: white;
     background-color: #E64D7C;
     text-align: center;
-    font-family: "ivyora-display", serif;
+    font-family: "ivyora-display", sans-serif;
     font-weight: 400;
     font-style: italic;
     font-size: 20px;
@@ -509,19 +584,50 @@ details p {
     color: #E64D7C;
 }
 
+/* Buttons */
+
+
 /* Footer */
 footer {
-    text-align: center;
-    padding: 20px;
+    position: relative;
     background-color: #F7DDE8;
     color: #E64D7C;
+    padding: 20px 5%;
+    text-align: center;
+    overflow: hidden;
+}
+
+.footer-columns {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.footer-left,
+.footer-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-divider {
+    width: 2px;
+    height: 100px;
+    background-color: white;
+    border: 1px solid #E64D7C;
+    border-radius: 45px;
+    opacity: 0.7;
 }
 
 .footer-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
 }
 
 footer h4 {
@@ -535,36 +641,27 @@ footer p {
     font-size: 16px;
     font-style: italic;
     font-weight: 200;
-    line-height: normal;
+    margin-top: 10px;
     border-radius: 45px;
     border: 1px solid #FFF;
     background: #E64D7C;
-    width: 25%;
-    margin-left: 37.5%;
-    padding: 5px 0;
+    padding: 6px 20px;
 }
 
-footer hr {
-    width: 296px;
-    height: 2px;
-    flex-shrink: 0;
-    border: 0.5px solid #E64D7C;
-    background: #FFF;
-}
-
-footer img {
-    position: relative;
-    display: inline-block;
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
 }
 
 footer a img {
-    width: 6%;
+    width: 70px;
     height: auto;
     transition: transform 0.3s ease, filter 0.3s ease;
-    margin: -8px 5px;
 }
 
 footer a img:hover {
-    transform: scale(1.2); 
+    transform: scale(1.2);
     filter: drop-shadow(0px 0px 6px #E64D7C);
 }
